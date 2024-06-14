@@ -1,0 +1,15 @@
+{
+    "product":[
+        {"id":1,"pname":"Laptop","price":50000,"company":"HP"},
+        {"id":2,"pname":"Adaptor","price":3000,"company":"HP"},
+        {"id":3,"pname":"Mouse","price":500,"company":"Sony"},
+        {"id":4,"pname":"USB","price":2000,"company":"Dell"},
+        {"id":5,"pname":"Keyboard","price":400,"company":"Iball"},
+        {"id":6,"pname":"Cable","price":300,"company":"china"}
+    ],
+    "users":[
+        {"id":1,"uname":"admin@gmail.com","upass":"admin@123"},
+        {"id":2,"uname":"hero@gmail.com","upass":"hero@123"},
+        {"id":3,"uname":"king@gmail.com","upass":"king@123"}
+    ]
+}

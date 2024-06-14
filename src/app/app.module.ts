@@ -5,11 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { DirevtiveComponent } from './components/direvtive/direvtive.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { MypipeComponent } from './components/mypipe/mypipe.component';
 import { CubePipe } from './shared/customepipe/cube.pipe';
 import { EmpDetailsComponent } from './components/emp-details/emp-details.component';
-
+import { AngFormComponent } from './components/ang-form/ang-form.component';
+import { RtfComponent } from './components/rtf/rtf.component';
+import { UtfComponent } from './components/utf/utf.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MainDashboardComponent } from './components/main-dashboard/main-dashboard.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BreakFastComponent } from './components/break-fast/break-fast.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductDashboardComponent } from './crud/product-dashboard/product-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +26,23 @@ import { EmpDetailsComponent } from './components/emp-details/emp-details.compon
     DirevtiveComponent,
     MypipeComponent,
     CubePipe,
-    EmpDetailsComponent
+    EmpDetailsComponent,
+    AngFormComponent,
+    RtfComponent,
+    UtfComponent,
+    PageNotFoundComponent,
+    MainDashboardComponent,
+    NavComponent,
+    FooterComponent,
+    BreakFastComponent,
+    ProductDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

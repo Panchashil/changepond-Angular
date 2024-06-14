@@ -102,3 +102,103 @@ step3: terminate angular project and restart it
 ng g c components/empDetails 
 
 *how to display array of object data in table by using *ngFor
+===================================================================
+14/6/24 
+
+*Routing: navigation of component.
+         -display component output or view by writting its path in browser url.
+         -Routing will display component output under <router-outlet> <router-outlet> directory.
+         -routing is array object containing property with value.
+         -in angular root routing module name is app-routing-module.ts 
+
+*types of routing 
+1.naming routing: we write component routing path in browser url to display component output
+2.default routing: display component output by default means , keep its path  value blanck in routing
+                    - try to keep default routing first in order.
+3.redirect routing: display component output by writting different path name.
+4.parameterize routing : passing parameter with path name to display component output 
+5.child routing : defing one routing inside another routing
+                 -for this in parent routing we have to use children property.
+                 -in parent routing component html file we  must write <router-outlet><router-outlet> 
+
+6.wildcard routing: display component output ,when user write wrong path in browser url.
+                    -in this we write * as value in routing path.
+                    -wildcard routing must last routing,router define below to it never work.
+
+angForm,rtf,utdf,pagenotfound,mainDashboard 
+
+ng g c components/angForm
+
+*how to navigate one component to another component by click on button.
+*how to create layout 
+
+*Form validation in angular 
+*In angular there are two ways to perform form validation.
+1. By using UTDF(User template Driven Form):
+-when we have to perform simple and small form validation in that case we use utdf.
+-in utdf validation code will in html file.
+-in this we use ngModel model directory.
+
+2. By using RTF(Reactive template Form) :
+-when we have write complex logic to perform form validation in that case we use rtf.
+-in rtf validation perform in ts file. 
+-to Rtf validation first we have to import ReactiveFormsModule in root module.
+-in rtf form validation we use two classes 
+ 1.FormGroup: it will hold call FormControl data in it as well as it tract status of form.
+ 2.FormControl: it will track status and validation of individual input control.
+
+
+step1: import ReactiveFormsModule in root module(app.module.ts) from FromsModule
+step2: import FormGroup and FormControl class in rtf component
+
+*Form validation with regular expression.
+
+*service: in angular service is special class with extra power.
+         -we can share data with multiple component.
+         -we can implement bussiness logic in it.
+         -we can perform external communication(fetch data from server).
+To create service 
+ng g service serviceName 
+
+*How to access service data into any component.
+-to access data from service to component for that in component constructor we have to create instance of service class then we can access service data into component.
+
+-creating service class instance in component constructor is called dependecy injection.
+
+ng g service shared/services/myService
+
+*How to create REST fake API 
+dummy server : json-server 
+npm i -g json-server 
+database : json database 
+-we create json database file 
+
+*How to upload db.json file on json-server 
+cd src/app/shared/database (press enter)
+json-server --watch -p 8888 db.json  (press enter)
+
+
+*to make request from service to server we have to create instance of HttpClient class in service .but HttpClient class is not part of core angular .it is part of HttpClientModule .
+for this first we have to import HttpClientModule in our root module. 
+
+ ng g service shared/services/databaseService
+
+*to make request from service  to server we have to create instance of HttpClient class in service constructor.
+
+ng g c crud/productDashboard
+
+*here we make get request successfully
+
+
+
+
+
+
+
+
+
+
+
+
+
+
