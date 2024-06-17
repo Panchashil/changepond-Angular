@@ -188,6 +188,59 @@ for this first we have to import HttpClientModule in our root module.
 ng g c crud/productDashboard
 
 *here we make get request successfully
+====================================================
+17/6/24
+
+*use of concurrently library.
+step1:npm i -g concurrently 
+step2 : in package.json file 
+"json-server":"cd src/app/shared/database && json-server --watch -p 8888 db.json",
+"start-dev": "concurrently \"ng s --o\" \"npm run json-server\"",
+
+step3: terminate or restatrt angular project
+step4: npm run start-dev  
+
+*display server data into table 
+*use of font-awesome 
+ step1:npm i font-awesome 
+step2: in angular.jin file in style arrray write 
+       "font-awesome/css/font-awesom.min.css",
+
+step3: restart angular project 
+step4: copy icon cody from font-awesome official 
+       website and paste it in angular project       
+
+*delete request 
+
+*post request 
+ng g c crud/productAdd
+
+*Use of Router class object ot perform automatic navigation 
+*How to perform edit operation 
+ng g c crud/productUpdate
+
+
+*Angular Material : it provide inbuile UI Component for angular application.
+https://material.angular.io/
+
+*how to use Angular material 
+step1: ng add @angular/material
+step2 : restart angular project 
+step3: import angular material component in root module .
+
+*Guard : it prevent to display component view or output.
+ng g guard guardName 
+
+ng g guard shared/Guards/auth 
+      
+Login Module Done    
+*I tell logout logic to implete i given idea 
+
+
+===================================================
+
+
+
 
 
 

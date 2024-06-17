@@ -10,10 +10,18 @@ import { UtfComponent } from './components/utf/utf.component';
 import { MainDashboardComponent } from './components/main-dashboard/main-dashboard.component';
 import { BreakFastComponent } from './components/break-fast/break-fast.component';
 import { ProductDashboardComponent } from './crud/product-dashboard/product-dashboard.component';
+import { ProductAddComponent } from './crud/product-add/product-add.component';
+import { ProductUpdateComponent } from './crud/product-update/product-update.component';
+import { MyangularMaterialComponent } from './components/myangular-material/myangular-material.component';
+import { LoginComponent } from './components/login/login.component';
+import { authGuard } from './shared/Guards/auth.guard';
 
 const routes: Routes = [
- 
-  {path:"maindashboard",component:MainDashboardComponent,children:[
+    
+  {path:"",component:LoginComponent},
+  {path:"login",component:LoginComponent},
+
+  {path:"maindashboard",component:MainDashboardComponent, canActivate:[authGuard],  children:[
        //2.default routing 
   // {path:"",component:DatabindingComponent},
 
@@ -35,6 +43,9 @@ const routes: Routes = [
   {path:"breakfast",component:BreakFastComponent},
   {path:"empdetail",component:EmpDetailsComponent},
   {path:"productdash",component:ProductDashboardComponent},
+  {path:"productadd",component:ProductAddComponent},
+  {path:"productupdate/:id",component:ProductUpdateComponent},
+  {path:"angularmat",component:MyangularMaterialComponent},
   // 4. parameterize routing 
   {path:"empdetail/:id",component:EmpDetailsComponent},
   // child routing 

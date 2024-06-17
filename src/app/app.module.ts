@@ -19,6 +19,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BreakFastComponent } from './components/break-fast/break-fast.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDashboardComponent } from './crud/product-dashboard/product-dashboard.component';
+import { ProductAddComponent } from './crud/product-add/product-add.component';
+import { ProductUpdateComponent } from './crud/product-update/product-update.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MyangularMaterialComponent } from './components/myangular-material/myangular-material.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './components/login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,17 +43,24 @@ import { ProductDashboardComponent } from './crud/product-dashboard/product-dash
     NavComponent,
     FooterComponent,
     BreakFastComponent,
-    ProductDashboardComponent
+    ProductDashboardComponent,
+    ProductAddComponent,
+    ProductUpdateComponent,
+    MyangularMaterialComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

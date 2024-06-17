@@ -10,10 +10,24 @@ export class ProductDashboardComponent {
      
   myproducts:any;
   constructor(private dbserv:DatabaseServiceService){}
+
   ngOnInit(){
-     this.dbserv.getRecord("product").subscribe((res)=>{
+     this.fetchData();
+  }
+
+  fetchData(){
+    this.dbserv.getRecord("product").subscribe((res)=>{
       this.myproducts = res;
       console.log(res);
      })
+  }
+
+  deleteData(id:any){
+        if(window.confirm(`are you sure to delete record with id ${id}`)){
+          this.dbserv.deleteRecord("product",id).subscribe(()=>{
+            window.alert("Record deleted successfully");
+            this.fetchData();
+          })
+        }    
   }
 }
